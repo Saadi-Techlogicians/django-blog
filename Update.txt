@@ -1,0 +1,24 @@
+Update : 1
+
+Started Building Blog Application from Scratch:
+
+
+1. Created a doc for analysing the features and the work flow.
+
+2. Project and Environment setup
+
+3. Url pattern and routing by creating views.
+
+4. Worked with templates to render some static dictionary data.
+
+5. Added bootstrap into the template
+.
+6. Access Django Admin panel by creating superuser.
+
+7. Created a model for post.And Register in to the admin.
+
+Update : 2
+
+1. Created a new user App to manage all user activity from this app.
+2. Created a registration form for the users.
+          
