@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from .models import Profile
 from django.core.exceptions import ValidationError
 
 
@@ -9,7 +10,7 @@ class UserRegisterForm(UserCreationForm):
 
     class Meta:
         model = User
-        fields = ['username', 'email', 'password']
+        fields = ['username', 'email', 'password1', 'password2']
 
     def clean_email(self):
         email = self.cleaned_data['email']
@@ -22,6 +23,25 @@ class UserRegisterForm(UserCreationForm):
         if len(password) < 8:
             raise forms.ValidationError("Password length should be greater than 8")
         return password
+
+
+# Create a UserUpdateForm to update username and email
+
+class UserUpdateForm(forms.ModelForm):
+    email = forms.EmailField()
+
+    class Meta:
+        model = User
+        fields = ['username', 'email']
+
+
+# Create a ProfileUpdateForm to update image
+
+class ProfileUpdateForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        fields = ['image']
+
 
 
 

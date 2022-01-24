@@ -89,4 +89,7 @@ a.article-title:hover {
 .theme-button:hover{
   background-color: #1f2833d8;
 }
+img{
+object-fit:cover!important
+}
 
